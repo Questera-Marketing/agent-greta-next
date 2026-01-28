@@ -13,30 +13,27 @@ export const blogs: BlogPost[] = [
     slug: 'greta-vs-lovable-why-greta-wins-at-vibe-coding',
     title: 'Greta vs Lovable: Why Greta Wins at Vibe Coding',
     excerpt: 'Detailed comparison of AI app builders. Why Greta the Growth Engineering Tech Agent is the superior choice for production apps.',
-    date: '2026-01-28',
+    date: 'Jan 28, 2026',
     author: 'Pankaj Vashisht',
     category: 'Comparisons',
-    content: `
-      ## The Rise of Vibe Coding
-      Vibe coding is about moving as fast as you can think. But not all AI builders are created equal...
-      
-      ### 1. Architecture: Production vs. Prototype
-      While Lovable is great for quick mockups, **Greta** is built for production...
-      
-      ### 2. Growth Engineering Focus
-      Greta isn't just about code; it's about growth...
-    `
+    content: `...`
   },
   {
-    slug: 'vibe-coding-with-ai-future-of-software-development',
-    title: 'Vibe Coding with AI: The Future of Software Development',
-    excerpt: 'How AI agents are changing the way we build startups. A deep dive into the vibe coding ecosystem.',
-    date: '2026-01-27',
+    slug: 'greta-vs-bolt-new-performance-and-scalability',
+    title: 'Greta vs Bolt.new: Built for Performance & Scalability',
+    excerpt: 'Why Greta is the preferred choice for full-stack AI agents compared to browser-based containers like Bolt.',
+    date: 'Jan 28, 2026',
     author: 'Pankaj Vashisht',
-    category: 'Insights',
-    content: `
-      ## Software is changing.
-      The era of manually writing boilerplate is over. Greta allows you to build the AI ecosystem of tomorrow...
-    `
+    category: 'Comparisons',
+    content: `...`
+  },
+  {
+    slug: 'the-art-of-vibe-coding-with-greta',
+    title: 'The Art of Vibe Coding: Moving at the Speed of Thought',
+    excerpt: 'Vibe coding is the future. Learn how Greta empowers developers to focus on product strategy instead of boilerplate.',
+    date: 'Jan 27, 2026',
+    author: 'Pankaj Vashisht',
+    category: 'Productivity',
+    content: `...`
   }
 ];
