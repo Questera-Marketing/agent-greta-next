@@ -25,20 +25,31 @@ import { data, getDocByLink, DocQuestion } from '@/components/learninghub/data';
 import { docComponents } from '@/components/learninghub/Docs';
 import SchemaOrg from '@/components/learninghub/SchemaOrg';
 
+import { useTheme } from '@/components/ThemeProvider';
+import { Moon, Sun } from 'lucide-react';
+
 // TopBar Component
 const TopBar = () => {
     const router = useRouter();
+    const { theme, toggleTheme } = useTheme();
+
     return (
-        <div className="h-[60px] border-b border-white/5 flex items-center justify-between px-6 bg-[#0A0A0A]/80 backdrop-blur-xl fixed top-0 left-0 right-0 z-50">
+        <div className="h-[60px] border-b border-white/5 dark:border-white/5 flex items-center justify-between px-6 bg-white/80 dark:bg-[#0A0A0A]/80 backdrop-blur-xl fixed top-0 left-0 right-0 z-50">
             <div className="flex items-center gap-4">
                 <div className="logo-container flex gap-[5px] items-end justify-center relative shrink-0 cursor-pointer" onClick={() => router.push("/")}>
                     <div className="relative shrink-0 ml-16">
-                        <Image alt="Greta Logo" width={24} height={24} src="/Gretanewlogo.svg" />
+                        <Image alt="Greta Logo" width={24} height={24} src="/Gretanewlogo.svg" className="dark:invert-0 invert" />
                     </div>
                 </div>
             </div>
-            <div className="flex items-center gap-6 text-[13px] text-gray-400 font-medium">
-                <span className="hover:text-white cursor-pointer" onClick={() => router.push('/learninghub')}>All Docs</span>
+            <div className="flex items-center gap-6 text-[13px] text-gray-600 dark:text-gray-400 font-medium">
+                <button 
+                  onClick={toggleTheme}
+                  className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                >
+                  {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                </button>
+                <span className="hover:text-black dark:hover:text-white cursor-pointer" onClick={() => router.push('/learninghub')}>All Docs</span>
                 <button onClick={() => window.open("https://greta.questera.ai/home", "_blank")} className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 text-[12px] rounded-[8px]">App</button>
             </div>
         </div>
