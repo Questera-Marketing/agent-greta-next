@@ -102,11 +102,11 @@ export const ListContent = ({ listData, style, listType = 'ul' }: { listData: Li
     };
 
     return listType === 'ul' ? (
-        <ul className={`list-disc ml-6 mt-3 text-[#B0B0B0]`} style={style}>
+        <ul className={`list-disc ml-6 mt-3 text-[#B0B0B0] space-y-2`} style={style}>
             {renderList()}
         </ul>
     ) : (
-        <ol className="list-decimal ml-6 mt-3" style={style}>
+        <ol className="list-decimal ml-6 mt-3 space-y-2" style={style}>
             {renderList()}
         </ol>
     );
@@ -114,12 +114,15 @@ export const ListContent = ({ listData, style, listType = 'ul' }: { listData: Li
 
 export const ImageContent = ({ img, altText, style }: { img: string; altText: string; style?: React.CSSProperties }) => {
     return (
-        <img
-            src={img}
-            alt={altText}
-            className="w-auto h-auto rounded-2xl mt-5 max-h-[500px]"
-            style={style}
-        />
+        <div className="relative w-full aspect-video mt-5 overflow-hidden rounded-2xl border border-white/10">
+            <img
+                src={img}
+                alt={altText}
+                className="w-full h-full object-cover"
+                style={style}
+                loading="lazy"
+            />
+        </div>
     );
 };
 
