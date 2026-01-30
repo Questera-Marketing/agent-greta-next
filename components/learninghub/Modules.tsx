@@ -52,17 +52,17 @@ export const Heading2 = ({ children, className, text }: { children: React.ReactN
     );
 };
 
-export const Content1 = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+export const Content1 = ({ children, className, style }: { children?: React.ReactNode; className?: string; style?: React.CSSProperties }) => {
     return (
-        <p className={`text-[1rem] leading-[1.75] mt-4 text-zinc-600 dark:text-zinc-400 ${className || ''}`}>
+        <p className={`text-[1rem] leading-[1.75] mt-4 text-zinc-600 dark:text-zinc-400 ${className || ''}`} style={style}>
             {children}
         </p>
     );
 };
 
-export const Content2 = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+export const Content2 = ({ children, className, style }: { children?: React.ReactNode; className?: string; style?: React.CSSProperties }) => {
     return (
-        <p className={`text-[1rem] leading-[1.75] mt-3 text-zinc-600 dark:text-zinc-400 ${className || ''}`}>
+        <p className={`text-[1rem] leading-[1.75] mt-3 text-zinc-600 dark:text-zinc-400 ${className || ''}`} style={style}>
             {children}
         </p>
     );
@@ -70,7 +70,7 @@ export const Content2 = ({ children, className }: { children: React.ReactNode; c
 
 type ListDataType = React.ReactNode[] | Record<string, string>;
 
-export const ListContent = ({ listData, style, listType = 'ul' }: { listData: ListDataType; style?: React.CSSProperties; listType?: 'ul' | 'ol' }) => {
+export const ListContent = ({ listData, style, listType = 'ul' }: { listData: React.ReactNode[] | Record<string, React.ReactNode>; style?: React.CSSProperties; listType?: 'ul' | 'ol' }) => {
     const renderList = () => {
         if (Array.isArray(listData)) {
             return listData.map((ele, index) => (

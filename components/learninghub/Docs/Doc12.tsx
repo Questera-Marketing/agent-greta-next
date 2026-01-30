@@ -1,8 +1,7 @@
 'use client';
 
-import { Content2 } from '../../Blogs/components/Module'
 import { imageConfig } from '../ImageConfig'
-import { Content1, Creator, Heading1, HeroHeader, ImageContent, ListContent, Topbar } from '../Modules'
+import { Content1, Content2, Creator, Heading1, HeroHeader, ImageContent, ListContent, Topbar } from '../Modules'
 
 const Doc12 = () => {
     return (
