@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Greta - Learning Hub",
   description: "Learn how to use Greta, the Growth Engineering Tech Agent",
+  metadataBase: new URL('https://www.greta.sh'),
 };
 
 export default function RootLayout({

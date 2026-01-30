@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: blog.title,
       description: blog.description || blog.excerpt,
       type: 'article',
-      url: `https://greta.questera.ai/blog/${slug}`,
+      url: `https://www.greta.sh/blog/${slug}`,
       images: blog.image ? [{ url: blog.image }] : [],
     },
     twitter: {
