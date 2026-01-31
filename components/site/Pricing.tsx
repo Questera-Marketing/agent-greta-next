@@ -115,7 +115,7 @@ const Pricing = () => {
                             }`}>
                                 {plan.cta}
                             </button>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 
