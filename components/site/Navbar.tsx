@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sparkles, ChevronRight } from 'lucide-react';
-
+import { Menu, X, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -22,61 +21,58 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Features', href: '#features' },
         { name: 'How it Works', href: '#how-it-works' },
-        { name: 'Showcase', href: '#showcase' },
+        { name: 'Blog', href: '/blog' },
         { name: 'Pricing', href: '#pricing' },
     ];
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 ${
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-4 ${
                 scrolled
-                    ? 'bg-background/80 backdrop-blur-md border-b border-border py-3'
+                    ? 'bg-black/60 backdrop-blur-xl border-b border-white/5 py-3'
                     : 'bg-transparent'
             }`}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 group">
                     <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="transition-all"
+                        whileHover={{ opacity: 0.8 }}
                     >
                         <Image 
                             src="/Gretanewlogo.svg" 
                             alt="Greta.sh Logo" 
-                            width={120} 
-                            height={40} 
-                            className="h-10 w-auto invert dark:invert-0 drop-shadow-[0_0_10px_rgba(124,58,237,0.2)]"
+                            width={110} 
+                            height={35} 
+                            className="h-9 w-auto invert dark:invert-0 brightness-[1.2]"
                         />
                     </motion.div>
                 </Link>
 
                 {/* Desktop Nav */}
-                <div className="hidden md:flex items-center gap-8">
+                <div className="hidden md:flex items-center gap-10">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-muted hover:text-foreground transition-colors"
+                            className="text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-500 hover:text-white transition-colors"
                         >
                             {link.name}
                         </Link>
                     ))}
                     <Link
                         href="https://greta.questera.ai"
-                        className="group flex items-center gap-2 bg-foreground text-background px-5 py-2.5 rounded-full text-sm font-bold hover:bg-foreground/90 transition-all hover:scale-105 active:scale-95"
+                        className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold hover:bg-zinc-200 transition-all active:scale-95"
                     >
-                        Get Started
-                        <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        Login
                     </Link>
                 </div>
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-foreground p-2"
+                    className="md:hidden text-white p-2"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
-                    {mobileMenuOpen ? <X /> : <Menu />}
+                    {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
                 </button>
             </div>
 
@@ -84,30 +80,27 @@ const Navbar = () => {
             <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-background border-b border-border overflow-hidden"
+                        initial={{ opacity: 0, scale: 0.98 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.98 }}
+                        className="md:hidden absolute top-0 left-0 w-full h-screen bg-black z-40 flex flex-col items-center justify-center gap-10"
                     >
-                        <div className="flex flex-col p-6 gap-4">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="text-lg font-medium text-muted hover:text-foreground transition-colors"
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
+                         <button
+                            className="absolute top-6 right-6 text-white p-2"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            <X size={32} />
+                        </button>
+                        {navLinks.map((link) => (
                             <Link
-                                href="https://greta.questera.ai"
+                                key={link.name}
+                                href={link.href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="bg-accent text-white p-4 rounded-xl text-center font-bold"
+                                className="text-2xl font-bold tracking-tighter text-zinc-500 hover:text-white transition-all"
                             >
-                                Launch App
+                                {link.name}
                             </Link>
-                        </div>
+                        ))}
                     </motion.div>
                 )}
             </AnimatePresence>
