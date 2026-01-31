@@ -27,14 +27,14 @@ const FAQItem = ({ question, answer }: { question: string, answer: string }) => 
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
-        <div className="border-b border-border py-6">
+        <div className="border-b border-zinc-900/50 py-8 first:border-t">
             <button
                 className="w-full flex items-center justify-between text-left group"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <h4 className="text-lg font-bold group-hover:text-accent transition-colors">{question}</h4>
-                <div className={`shrink-0 ml-4 w-8 h-8 rounded-full border border-border flex items-center justify-center transition-all ${isOpen ? 'bg-accent border-accent text-white rotate-90' : 'text-muted'}`}>
-                    {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-400 group-hover:text-white transition-colors">{question}</h4>
+                <div className={`shrink-0 ml-4 w-6 h-6 flex items-center justify-center transition-all ${isOpen ? 'text-white' : 'text-zinc-600'}`}>
+                    {isOpen ? <Minus size={14} strokeWidth={1.5} /> : <Plus size={14} strokeWidth={1.5} />}
                 </div>
             </button>
             <motion.div
@@ -42,7 +42,7 @@ const FAQItem = ({ question, answer }: { question: string, answer: string }) => 
                 animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
                 className="overflow-hidden"
             >
-                <p className="pt-4 text-muted leading-relaxed">
+                <p className="pt-6 text-zinc-500 text-[13px] leading-relaxed max-w-2xl font-medium">
                     {answer}
                 </p>
             </motion.div>
@@ -52,13 +52,13 @@ const FAQItem = ({ question, answer }: { question: string, answer: string }) => 
 
 const FAQ = () => {
     return (
-        <section className="py-24 bg-card/10">
-            <div className="max-w-4xl mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-accent font-bold tracking-widest text-xs uppercase mb-4">FAQ</h2>
-                    <h3 className="text-4xl font-black">Common questions about Greta.</h3>
+        <section className="py-48 bg-black">
+            <div className="max-w-4xl mx-auto px-8">
+                <div className="mb-24 border-l border-zinc-900 pl-10">
+                    <h2 className="text-zinc-600 text-[10px] font-black uppercase tracking-[0.4em] mb-4">Support Protocol</h2>
+                    <h3 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">Frequently Asked <br />Questions.</h3>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-0">
                     {faqs.map((faq, index) => (
                         <FAQItem key={index} {...faq} />
                     ))}
