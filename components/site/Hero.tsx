@@ -23,10 +23,10 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] mb-12 text-white"
+                        className="text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-[-0.06em] lg:tracking-[-0.08em] leading-[0.8] mb-12 text-white"
                     >
                         Engineer your <br />
-                        growth at scale.
+                        <span className="gradient-text drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">growth agent.</span>
                     </motion.h1>
 
                     <motion.p
