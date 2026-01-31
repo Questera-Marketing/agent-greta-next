@@ -2,79 +2,61 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, Twitter, Github, Linkedin, Mail } from 'lucide-react';
-
+import { Twitter, Github, Linkedin, Mail } from 'lucide-react';
 import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <footer className="pt-24 pb-12 border-t border-border bg-card/20">
+        <footer className="pt-48 pb-12 bg-black border-t border-zinc-900">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                    <div className="lg:col-span-1">
-                        <Link href="/" className="flex items-center gap-2 mb-6 group">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-24 mb-32">
+                    <div className="col-span-1 md:col-span-1">
+                        <Link href="/" className="inline-block mb-10">
                             <Image 
                                 src="/Gretanewlogo.svg" 
                                 alt="Greta.sh Logo" 
-                                width={80} 
-                                height={24} 
-                                className="h-6 w-auto invert dark:invert-0"
+                                width={90} 
+                                height={25} 
+                                className="invert brightness-[1.2]"
                             />
                         </Link>
-                        <p className="text-muted text-sm leading-relaxed mb-8 max-w-xs">
-                            The specialized AI agent for growth engineering. Build products that convert and scale from day zero.
+                        <p className="text-zinc-500 text-xs leading-relaxed max-w-[180px]">
+                            Specialized AI infrastructure for modern growth engineering.
                         </p>
-                        <div className="flex items-center gap-4">
-                            <Link href="#" className="p-2 bg-muted/10 rounded-lg text-muted hover:text-accent transition-colors">
-                                <Twitter className="w-5 h-5" />
-                            </Link>
-                            <Link href="#" className="p-2 bg-muted/10 rounded-lg text-muted hover:text-accent transition-colors">
-                                <Github className="w-5 h-5" />
-                            </Link>
-                            <Link href="#" className="p-2 bg-muted/10 rounded-lg text-muted hover:text-accent transition-colors">
-                                <Linkedin className="w-5 h-5" />
-                            </Link>
+                    </div>
+
+                    <div>
+                        <h4 className="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-10">Platform</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="#features" className="text-zinc-500 text-xs hover:text-white transition-colors">Features</Link></li>
+                            <li><Link href="#how-it-works" className="text-zinc-500 text-xs hover:text-white transition-colors">Workflow</Link></li>
+                            <li><Link href="#pricing" className="text-zinc-500 text-xs hover:text-white transition-colors">Pricing</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-10">Resources</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="/learninghub" className="text-zinc-500 text-xs hover:text-white transition-colors">Documentation</Link></li>
+                            <li><Link href="/blog" className="text-zinc-500 text-xs hover:text-white transition-colors">Blog</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-10">Social</h4>
+                        <div className="flex gap-6 items-center">
+                            <Link href="#" className="text-zinc-500 hover:text-white transition-colors"><Twitter size={16} /></Link>
+                            <Link href="#" className="text-zinc-500 hover:text-white transition-colors"><Github size={16} /></Link>
                         </div>
-                    </div>
-
-                    <div>
-                        <h4 className="font-bold mb-6">Product</h4>
-                        <ul className="space-y-4">
-                            <li><Link href="#features" className="text-muted text-sm hover:text-foreground transition-colors">Features</Link></li>
-                            <li><Link href="#how-it-works" className="text-muted text-sm hover:text-foreground transition-colors">Workflow</Link></li>
-                            <li><Link href="#pricing" className="text-muted text-sm hover:text-foreground transition-colors">Pricing</Link></li>
-                            <li><Link href="https://greta.questera.ai" className="text-muted text-sm hover:text-foreground transition-colors">Launch App</Link></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="font-bold mb-6">Resources</h4>
-                        <ul className="space-y-4">
-                            <li><Link href="/learninghub" className="text-muted text-sm hover:text-foreground transition-colors">Documentation</Link></li>
-                            <li><Link href="/blog" className="text-muted text-sm hover:text-foreground transition-colors">Blog</Link></li>
-                            <li><Link href="/learninghub/greta-community" className="text-muted text-sm hover:text-foreground transition-colors">Community</Link></li>
-                            <li><Link href="/learninghub/marketplace" className="text-muted text-sm hover:text-foreground transition-colors">Marketplace</Link></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="font-bold mb-6">Support</h4>
-                        <ul className="space-y-4">
-                            <li><Link href="/learninghub/contact-support" className="text-muted text-sm hover:text-foreground transition-colors">Contact</Link></li>
-                            <li><Link href="#" className="text-muted text-sm hover:text-foreground transition-colors">Status</Link></li>
-                            <li><Link href="#" className="text-muted text-sm hover:text-foreground transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="#" className="text-muted text-sm hover:text-foreground transition-colors">Terms of Service</Link></li>
-                        </ul>
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
-                    <p className="text-muted text-xs">
-                        © {new Date().getFullYear()} Questera AI. All rights reserved.
+                <div className="pt-12 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <p className="text-zinc-700 text-[10px] tracking-widest font-bold uppercase">
+                        © {new Date().getFullYear()} Questera AI Protocol
                     </p>
-                    <div className="flex items-center gap-2 text-xs text-muted">
-                        <Mail className="w-4 h-4" />
-                        hello@greta.sh
+                    <div className="text-[10px] font-bold tracking-widest text-zinc-700 uppercase">
+                        STAY AUTONOMOUS
                     </div>
                 </div>
             </div>
