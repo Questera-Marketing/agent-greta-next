@@ -15,9 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Greta - Learning Hub",
-  description: "Learn how to use Greta, the Growth Engineering Tech Agent",
+  title: "Greta.sh | Growth Engineering Tech Agent & Vibe Coding Tool",
+  description: "Greta (Growth Engineering Tech Agent) is the next-gen vibe coding tool for autonomous growth, marketing, and sales operations. Build, automate, and scale with Greta.sh.",
+  keywords: ["vibe coding", "growth engineering", "AI agent", "autonomous marketing", "Greta AI", "Lovable alternative", "no-code app builder", "AI software engineer"],
   metadataBase: new URL('https://www.greta.sh'),
+  openGraph: {
+    title: "Greta.sh | Growth Engineering Tech Agent",
+    description: "The AI agent for Growth Engineers. Vibe code your way to success.",
+    url: "https://www.greta.sh",
+    siteName: "Greta.sh",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

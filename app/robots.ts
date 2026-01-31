@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://greta.questera.ai/sitemap.xml', // Update to your production URL
+    sitemap: 'https://www.greta.sh/sitemap.xml',
   };
 }
