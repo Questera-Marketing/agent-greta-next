@@ -14,7 +14,7 @@ export const HeroHeader = ({ text }: { text: string }) => {
     const id = text ? text.toLowerCase().trim().split(' ').join('-') : '';
     return (
         <h1
-            className="text-[2.5rem] md:text-[2.75rem] font-bold leading-[1.2] tracking-tight text-zinc-900 dark:text-white mb-2"
+            className="text-[2.5rem] md:text-6xl font-black leading-[1.1] tracking-tighter text-white mb-12"
             data-section-id={id}
             id={id}
         >
@@ -28,11 +28,11 @@ export const Heading1 = ({ children, className, text }: { children: React.ReactN
     const id = content ? content.toLowerCase().trim().split(' ').join('-') : '';
     return (
         <h2
-            className={`${className || ''} text-[1.5rem] font-semibold leading-[1.3] tracking-tight mt-12 mb-4 text-zinc-800 dark:text-zinc-100 flex items-center gap-3 group`}
+            className={`${className || ''} text-2xl font-bold leading-[1.3] tracking-tighter mt-24 mb-6 text-white flex items-center gap-3 group border-t border-zinc-900 pt-12`}
             data-section-id={id}
             id={id}
         >
-            <span className="w-1 h-6 bg-gradient-to-b from-violet-500 to-blue-500 rounded-full opacity-80"></span>
+            <span className="w-1 h-6 bg-white rounded-full opacity-20 group-hover:opacity-100 transition-opacity"></span>
             {children}
         </h2>
     );
@@ -43,7 +43,7 @@ export const Heading2 = ({ children, className, text }: { children: React.ReactN
     const id = content ? content.toLowerCase().trim().split(' ').join('-') : '';
     return (
         <h3
-            className={`${className || ''} text-[1.125rem] font-semibold leading-[1.4] mt-8 mb-3 text-zinc-700 dark:text-zinc-200`}
+            className={`${className || ''} text-lg font-bold tracking-tight mt-12 mb-4 text-zinc-100 uppercase tracking-widest text-[10px]`}
             data-section-id={id}
             id={id}
         >
@@ -54,7 +54,7 @@ export const Heading2 = ({ children, className, text }: { children: React.ReactN
 
 export const Content1 = ({ children, className, style }: { children?: React.ReactNode; className?: string; style?: React.CSSProperties }) => {
     return (
-        <p className={`text-[1rem] leading-[1.75] mt-4 text-zinc-600 dark:text-zinc-400 ${className || ''}`} style={style}>
+        <p className={`text-[1.1rem] leading-[1.8] mt-6 text-zinc-500 font-medium ${className || ''}`} style={style}>
             {children}
         </p>
     );
@@ -62,7 +62,7 @@ export const Content1 = ({ children, className, style }: { children?: React.Reac
 
 export const Content2 = ({ children, className, style }: { children?: React.ReactNode; className?: string; style?: React.CSSProperties }) => {
     return (
-        <p className={`text-[1rem] leading-[1.75] mt-3 text-zinc-600 dark:text-zinc-400 ${className || ''}`} style={style}>
+        <p className={`text-[1.1rem] leading-[1.8] mt-4 text-zinc-500 font-medium ${className || ''}`} style={style}>
             {children}
         </p>
     );
@@ -75,7 +75,7 @@ export const ListContent = ({ listData, style, listType = 'ul' }: { listData: Re
         if (Array.isArray(listData)) {
             return listData.map((ele, index) => (
                 <li
-                    className="text-[1rem] leading-[1.75] text-zinc-600 dark:text-zinc-400 pl-2"
+                    className="text-[1.1rem] leading-[1.8] text-zinc-500 font-medium pl-4"
                     style={style}
                     key={index}
                 >
@@ -84,19 +84,19 @@ export const ListContent = ({ listData, style, listType = 'ul' }: { listData: Re
             ));
         }
         return Object.keys(listData).map((ele, index) => (
-            <li className="mt-4 pl-2" style={style} key={index}>
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">{ele}:</span>
-                <span className="text-zinc-600 dark:text-zinc-400 ml-1">{listData[ele]}</span>
+            <li className="mt-6 pl-4" style={style} key={index}>
+                <div className="font-bold text-white text-[14px] mb-1">{ele}:</div>
+                <div className="text-zinc-500 text-[1.1rem] leading-[1.8]">{listData[ele]}</div>
             </li>
         ));
     };
 
     const listClasses = listType === 'ul'
-        ? "list-disc marker:text-violet-500 dark:marker:text-violet-400"
-        : "list-decimal marker:text-violet-500 dark:marker:text-violet-400";
+        ? "list-none"
+        : "list-none";
 
     return (
-        <ul className={`${listClasses} ml-6 mt-4 space-y-3`} style={style}>
+        <ul className={`${listClasses} space-y-4 mt-8`} style={style}>
             {renderList()}
         </ul>
     );
@@ -104,17 +104,15 @@ export const ListContent = ({ listData, style, listType = 'ul' }: { listData: Re
 
 export const ImageContent = ({ img, altText, style }: { img: string; altText: string; style?: React.CSSProperties }) => {
     return (
-        <figure className="relative w-full mt-6 mb-2 group">
-            <div className="relative overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shadow-sm hover:shadow-md transition-shadow duration-300">
+        <figure className="relative w-full mt-12 mb-12 group">
+            <div className="relative overflow-hidden rounded-2xl border border-zinc-900 bg-zinc-950 shadow-2xl">
                 <img
                     src={img}
                     alt={altText}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
                     style={style}
                     loading="lazy"
                 />
-                {/* Subtle gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
         </figure>
     );
@@ -122,30 +120,30 @@ export const ImageContent = ({ img, altText, style }: { img: string; altText: st
 
 export const TableContent = ({ columns, data }: { columns: string[]; data: Record<string, string>[] }) => {
     return (
-        <div className="overflow-x-auto mt-6 mb-6 rounded-xl border border-zinc-200 dark:border-zinc-800">
+        <div className="overflow-x-auto mt-12 mb-12 rounded-2xl border border-zinc-900 bg-black">
             <table className="min-w-full">
                 <thead>
-                    <tr className="bg-zinc-50 dark:bg-zinc-900/50 border-b border-zinc-200 dark:border-zinc-800">
+                    <tr className="bg-zinc-950 border-b border-zinc-900">
                         {columns.map((column, index) => (
                             <th
                                 key={index}
-                                className="py-3.5 px-4 text-left text-[0.8125rem] font-semibold uppercase tracking-wider text-zinc-600 dark:text-zinc-400"
+                                className="py-6 px-6 text-left text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500"
                             >
                                 {column}
                             </th>
                         ))}
                     </tr>
                 </thead>
-                <tbody className="divide-y divide-zinc-200 dark:divide-zinc-800">
+                <tbody className="divide-y divide-zinc-900">
                     {data.map((row, rowIndex) => (
                         <tr
                             key={rowIndex}
-                            className="hover:bg-zinc-50 dark:hover:bg-zinc-900/30 transition-colors"
+                            className="hover:bg-zinc-900/50 transition-colors"
                         >
                             {columns.map((column, colIndex) => (
                                 <td
                                     key={colIndex}
-                                    className="py-3.5 px-4 text-[0.9375rem] text-zinc-700 dark:text-zinc-300"
+                                    className="py-6 px-6 text-[14px] text-zinc-400 font-medium"
                                 >
                                     {row[column] || '—'}
                                 </td>
@@ -157,4 +155,3 @@ export const TableContent = ({ columns, data }: { columns: string[]; data: Recor
         </div>
     );
 };
-

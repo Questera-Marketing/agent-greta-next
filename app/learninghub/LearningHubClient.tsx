@@ -36,7 +36,15 @@ const TopBar = ({ onOpenSearch, onToggleMobileMenu }: { onOpenSearch: () => void
                     <Menu size={20} />
                 </button>
                 <div className="cursor-pointer" onClick={() => router.push("/")}>
-                    <Image alt="Greta Logo" width={90} height={25} src="/Gretanewlogo.svg" className="invert brightness-[1.2]" />
+                    <motion.div whileHover={{ opacity: 0.8 }}>
+                        <Image 
+                            alt="Greta Logo" 
+                            width={90} 
+                            height={25} 
+                            src="/Gretanewlogo.svg" 
+                            className="invert dark:invert-0 brightness-[1.5]" 
+                        />
+                    </motion.div>
                 </div>
             </div>
 
