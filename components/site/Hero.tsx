@@ -13,10 +13,23 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/50 border border-zinc-800 text-zinc-400 text-[10px] font-black uppercase tracking-[0.3em] mb-16"
+                        className="flex flex-col md:flex-row items-center justify-center gap-4 mb-20 group"
                     >
-                        <Sparkles className="w-3 h-3 text-white" />
-                        Infrastructure for Growth Engineering
+                         {/* Resend Style Breadcrumbs for Hero */}
+                         <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-600">
+                             <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                             <span className="text-zinc-800">/</span>
+                             <Link href="/learninghub" className="hover:text-white transition-colors">Protocol</Link>
+                             <span className="text-zinc-800">/</span>
+                             <span className="text-zinc-400">v1.0</span>
+                         </div>
+                         
+                         <div className="hidden md:block w-px h-4 bg-zinc-900 mx-2" />
+
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/50 border border-zinc-800 text-zinc-400 text-[10px] font-black uppercase tracking-[0.3em]">
+                            <Sparkles className="w-3 h-3 text-white animate-pulse" />
+                             Growth Engineering Protocol
+                        </div>
                     </motion.div>
 
                     <motion.h1
