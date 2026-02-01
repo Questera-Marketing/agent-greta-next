@@ -1,107 +1,113 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useParams, useRouter } from 'next/navigation';
 import { blogs } from '@/components/blog/blogData';
-import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { ChevronLeft, Calendar, User, Tag } from 'lucide-react';
+import { ChevronLeft, Calendar, User, Tag, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
-type Props = {
-  params: Promise<{ slug: string }>;
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = (await params).slug;
+export default function BlogPostPage() {
+  const params = useParams();
+  const router = useRouter();
+  const slug = params?.slug as string;
   const blog = blogs.find(b => b.slug === slug);
 
-  if (!blog) return { title: 'Post Not Found' };
-
-  return {
-    title: `${blog.title} | Greta Blog`,
-    description: blog.description || blog.excerpt,
-    openGraph: {
-      title: blog.title,
-      description: blog.description || blog.excerpt,
-      type: 'article',
-      url: `https://www.greta.sh/blog/${slug}`,
-      images: blog.image ? [{ url: blog.image }] : [],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: blog.title,
-      description: blog.description || blog.excerpt,
-      images: blog.image ? [blog.image] : [],
-    }
-  };
-}
-
-export default async function BlogPostPage({ params }: Props) {
-  const slug = (await params).slug;
-  const blog = blogs.find(b => b.slug === slug);
-
-  if (!blog) notFound();
+  if (!blog) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center font-mono uppercase text-xs tracking-widest px-6 text-center">
+        Protocol error: 404 entry not found in engineering log.
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-white transition-colors duration-300">
-      <main className="max-w-4xl mx-auto px-6 py-20">
-        <Link href="/blog" className="flex items-center gap-2 text-gray-500 hover:text-purple-500 transition-colors mb-12 group">
-          <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-          Back to Blog
-        </Link>
-        
-        <header className="mb-12">
-           <div className="flex items-center gap-4 mb-6">
-             <span className="bg-purple-500/10 text-purple-500 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full flex items-center gap-2">
+    <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
+      {/* Top Protocol Bar */}
+      <header className="h-[64px] border-b border-zinc-900 flex items-center justify-between px-6 bg-black fixed top-0 left-0 right-0 z-50">
+        <div className="flex items-center gap-4">
+          <Link href="/" className="cursor-pointer">
+            <Image alt="Greta Logo" width={90} height={25} src="/Gretanewlogo.svg" className="invert brightness-[1.5]" />
+          </Link>
+        </div>
+        <div className="flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">
+          <Link href="/blog" className="hover:text-white transition-all flex items-center gap-2">
+            <ChevronLeft size={12} /> Back to Log
+          </Link>
+        </div>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-6 pt-48 pb-32">
+        {/* Entry Metadata */}
+        <div className="mb-16 border-l border-zinc-900 pl-10">
+          <div className="flex items-center gap-6 text-zinc-600 text-[10px] font-black uppercase tracking-[0.4em] mb-8">
+            <div className="flex items-center gap-2">
+               <Calendar size={12} /> {blog.date}
+            </div>
+            <div className="flex items-center gap-2">
+               <User size={12} /> {blog.author}
+            </div>
+             <div className="flex items-center gap-2 text-white">
                <Tag size={12} /> {blog.category}
-             </span>
-           </div>
-           
-           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
-             {blog.title}
-           </h1>
+            </div>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-10 leading-[0.95]">
+            {blog.title}
+          </h1>
+          
+          <p className="text-zinc-500 text-lg md:text-xl leading-relaxed max-w-2xl font-medium tracking-tight">
+            {blog.excerpt}
+          </p>
+        </div>
 
-           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 dark:text-gray-400 border-y border-gray-100 dark:border-white/5 py-6">
-             <div className="flex items-center gap-2">
-               <Calendar size={16} />
-               {blog.date}
-             </div>
-             <div className="flex items-center gap-2">
-               <User size={16} />
-               {blog.author}
-             </div>
-           </div>
-        </header>
-
+        {/* Hero Image */}
         {blog.image && (
-          <div className="relative w-full aspect-video rounded-3xl overflow-hidden mb-12 border border-gray-100 dark:border-white/5">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-24 border border-zinc-900 bg-zinc-950 group">
             <Image 
               src={blog.image} 
               alt={blog.title} 
               fill 
               priority
-              className="object-cover"
+              className="object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000"
             />
           </div>
         )}
 
-        <article className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-purple-500 prose-strong:text-black dark:prose-strong:text-white prose-img:rounded-2xl">
-          {/* Transforming markdown-ish content to minimal component-friendly blocks for better visuals */}
-          <div className="whitespace-pre-line leading-relaxed text-gray-700 dark:text-gray-300">
+        {/* Content Section */}
+        <article className="max-w-3xl mx-auto">
+          <div className="whitespace-pre-line leading-[1.8] text-zinc-400 text-lg font-medium tracking-tight space-y-6">
             {blog.content}
+          </div>
+          
+          {/* End Mark */}
+          <div className="mt-32 pt-12 border-t border-zinc-900 flex justify-between items-center text-zinc-600 text-[10px] font-bold uppercase tracking-widest">
+            <span>End of Log Entry</span>
+            <div onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="cursor-pointer hover:text-white transition-colors flex items-center gap-2">
+              <span className="mb-0.5">↑</span> Return to Top
+            </div>
           </div>
         </article>
 
-        {/* CTA Section */}
-        <section className="mt-20 p-8 rounded-3xl bg-gradient-to-br from-purple-500 to-blue-600 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Ready to build your next big thing?</h3>
-          <p className="mb-8 opacity-90">Join founders and engineers building at the speed of thought with Greta.</p>
-          <button 
-            onClick={() => window.open('https://greta.questera.ai/home', '_blank')}
-            className="bg-white text-purple-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors"
-          >
-            Start Vibe Coding Now
-          </button>
+        {/* Protocol CTA */}
+        <section className="mt-48 text-center bg-zinc-950 border border-zinc-900 rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,#111111_0%,transparent_70%)] opacity-50" />
+             <div className="relative z-10">
+                <h3 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-8">Ready to engineer <br /> your growth?</h3>
+                <p className="text-zinc-500 text-lg mb-12 max-w-sm mx-auto">Join the new era of autonomous development protocol today.</p>
+                <button 
+                  onClick={() => window.open('https://greta.questera.ai/home', '_blank')}
+                  className="bg-white text-black px-12 py-5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-zinc-200 transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-white/5 inline-flex items-center gap-3"
+                >
+                  Apply Protocol <ArrowRight size={14} />
+                </button>
+             </div>
         </section>
       </main>
+
+      {/* Background Decor */}
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.02]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
+      </div>
     </div>
   );
 }
