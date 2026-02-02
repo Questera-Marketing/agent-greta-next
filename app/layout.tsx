@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Figtree, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import SoftwareSchema from "@/components/site/SoftwareSchema";
+import BreadcrumbSchema from "@/components/site/BreadcrumbSchema";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -39,6 +41,8 @@ export default function RootLayout({
         className={`${figtree.variable} ${geistMono.variable} antialiased font-[Figtree]`}
       >
         <ThemeProvider>
+          <SoftwareSchema />
+          <BreadcrumbSchema />
           {children}
         </ThemeProvider>
       </body>
