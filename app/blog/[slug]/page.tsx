@@ -5,6 +5,7 @@ import { blogs } from '@/components/blog/blogData';
 import Image from 'next/image';
 import { ChevronLeft, Calendar, User, Tag, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
 
 export default function BlogPostPage() {
   const params = useParams();
@@ -75,8 +76,25 @@ export default function BlogPostPage() {
 
         {/* Content Section */}
         <article className="max-w-3xl mx-auto">
-          <div className="whitespace-pre-line leading-[1.8] text-zinc-400 text-lg font-medium tracking-tight space-y-6">
-            {blog.content}
+          <div className="whitespace-pre-line leading-[1.8] text-zinc-400 text-lg font-medium tracking-tight space-y-6 prose prose-invert prose-zinc max-w-none">
+            <ReactMarkdown
+              components={{
+                h2: ({ ...props }) => <h2 className="text-3xl font-bold text-white mt-12 mb-6" {...props} />,
+                h3: ({ ...props }) => <h3 className="text-xl font-bold text-white mt-8 mb-4" {...props} />,
+                p: ({ ...props }) => <p className="mb-6 leading-relaxed" {...props} />,
+                ul: ({ ...props }) => <ul className="list-disc list-inside mb-6 space-y-2" {...props} />,
+                li: ({ ...props }) => <li className="text-zinc-400" {...props} />,
+                img: ({ ...props }) => (
+                    <div className="my-12">
+                        <img className="rounded-xl border border-zinc-900 w-full" {...props} />
+                    </div>
+                ),
+                strong: ({ ...props }) => <strong className="text-white font-bold" {...props} />,
+                a: ({ ...props }) => <a className="text-white underline hover:text-zinc-300 transition-colors" {...props} />,
+              }}
+            >
+              {blog.content}
+            </ReactMarkdown>
           </div>
           
           {/* End Mark */}
