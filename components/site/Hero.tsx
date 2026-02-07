@@ -38,8 +38,8 @@ const Hero = () => {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="text-[4rem] sm:text-7xl md:text-8xl lg:text-[11rem] font-bold tracking-[-0.08em] leading-[0.9] sm:leading-[0.75] mb-12 sm:mb-16 text-white"
                     >
-                        Vibe code your <br />
-                        <span className="text-white brightness-[0.95]">growth agent.</span>
+                        Autonomous growth, <br />
+                        <span className="text-white brightness-[0.95]">engineered.</span>
                     </motion.h1>
 
                     <motion.p
