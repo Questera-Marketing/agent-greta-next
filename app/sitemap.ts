@@ -1,5 +1,5 @@
 import { data } from '@/components/learninghub/data';
-import { blogData } from '@/components/blog/blogData';
+import { blogs } from '@/components/blog/blogData';
 
 export async function generateSitemap() {
   const baseUrl = 'https://greta.questera.ai'; // Update this to your production URL
@@ -13,7 +13,7 @@ export async function generateSitemap() {
     }))
   );
 
-  const blogRoutes = blogData.map((blog) => ({
+  const blogRoutes = blogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
