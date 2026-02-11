@@ -11,6 +11,7 @@ export interface BlogItem {
   content: string;
   image?: string;
   description?: string;
+  keywords?: string;
 }
 
 export const blogs: BlogItem[] = [
@@ -29,6 +30,7 @@ Greta isn't just about code; it's about the entire lifecycle. With built-in modu
     date: "Jan 28, 2026",
     description: "A deep dive into why architectural integrity makes Greta the superior choice for production-grade AI development over prototyping tools like Lovable.",
     excerpt: "Detailed comparison of AI app builders. Why Greta the Growth Engineering Tech Agent is the superior choice for production apps.",
+    keywords: "AI app builder, Greta vs Lovable, production-ready AI, growth engineering, vibe coding",
     image: "/learninghub-images/Doc26Banner.png",
     slug: "greta-vs-lovable-why-greta-wins-at-vibe-coding",
     title: "Greta vs Lovable: Why Greta Wins at Vibe Coding"
@@ -43,10 +45,13 @@ Bolt.new relies on WebContainer technology. It is a masterpiece of engineering f
 ### Why Greta Wins on Infra
 1. **Native Deployment:** Unlike browser-bound environments, Greta hooks directly into your hosting providers (Vercel, Netlify, GCP).
 2. **Deep DB Integration:** Greta understands Supabase and MongoDB at a schema level, not just as an API endpoint.
-3. **Scalability:** When your traffic grows, a Greta-built app is already structured to handle the load.`,
+3. **Scalability:** When your traffic grows, a Greta-built app is already structured to handle the load.
+
+Want to see how Greta builds real-world apps? [Check out our guide on building an AI Helpdesk](/blog/build-helpdesk-with-ai).`,
     date: "Jan 28, 2026",
     description: "Comparing Greta's cloud-native infrastructure with Bolt.new's browser-based containers for real-world application performance.",
     excerpt: "Why Greta is the preferred choice for full-stack AI agents compared to browser-based containers like Bolt.",
+    keywords: "Greta vs Bolt.new, cloud-native AI, scalability, production AI apps, growth engineering",
     image: "/learninghub-images/Doc13Banner.png",
     slug: "greta-vs-bolt-new-performance-and-scalability",
     title: "Greta vs Bolt.new: Built for Performance & Scalability"
@@ -65,10 +70,13 @@ Replit aims to keep you in their ecosystem. Greta is built on the philosophy of 
 While Replit is a general-purpose IDE, Greta (Growth Engineering Tech Agent) is specialized. We don't just build the code; we build the marketing hooks, the SEO paths, and the conversion funnels. Greta understands that a startup needs more than just a running script—it needs a product that scales and sells.
 
 ### 3. State Management & Complexity
-For complex full-stack apps, Greta's Agent Mode excels at maintaining context across deep directory structures. Whether it's complex Redux logic or Supabase RLS policies, Greta is engineered for the "hard stuff" of production software.`,
+For complex full-stack apps, Greta's Agent Mode excels at maintaining context across deep directory structures. Whether it's complex Redux logic or Supabase RLS policies, Greta is engineered for the "hard stuff" of production software.
+
+Compare how we approach architecture vs [v0's UI-centric model](/blog/greta-vs-v0-from-ui-to-full-stack).`,
     date: "Jan 28, 2026",
     description: "A technical comparison between Replit Agent and Greta. Why founding engineers choose Greta for scalable AI applications.",
     excerpt: "Replit is a legendary IDE, but is their agent ready for growth engineering? Compare Greta and Replit for your next startup.",
+    keywords: "Greta vs Replit Agent, vibe coding, growth engineering, production AI, startup scalability",
     image: "/learninghub-images/Doc35Banner.png",
     slug: "greta-vs-replit-agent-production-logic-vs-column-ide",
     title: "Greta vs. Replit Agent: Production Logic vs. Cloud IDE"
@@ -85,6 +93,7 @@ Greta handles state management, API integrations, and backend logic that static 
     date: "Jan 25, 2026",
     description: "Comparing v0.dev and Greta for production-ready full-stack applications.",
     excerpt: "v0 is great for UI, but Greta builds the logic. See why Greta is the choice for functional AI applications.",
+    keywords: "v0.dev vs Greta, full-stack AI, UI vs logic, AI app development, growth engineering",
     image: "/learninghub-images/Doc2Banner.png",
     slug: "greta-vs-v0-from-ui-to-full-stack",
     title: "Greta vs v0.dev: Transitioning from UI to Full-Stack"
@@ -112,10 +121,13 @@ While Rocket.new excels at standardized web patterns, Greta shines in **complex 
 Rocket.new often keeps you within its optimized hosting and environment. Greta is built on the philosophy of **Portability**. Your code lives in your GitHub and deploys to your chosen infrastructure (Vercel, AWS, GCP, etc.), ensuring no vendor lock-in as your startup grows.
 
 ### Conclusion: Why Choose Greta?
-If you want to build a quick prototype for a hackathon, Rocket.new is great. But if you are building an **AI-first startup** that needs to scale, convert, and evolve, Greta is the growth engine you need.`,
+If you want to build a quick prototype for a hackathon, Rocket.new is great. But if you are building an **AI-first startup** that needs to scale, convert, and evolve, Greta is the growth engine you need.
+
+Ready to start? [Build your first app with Greta AI](https://greta.questera.ai/home).`,
     date: "Jan 29, 2026",
     description: "A detailed comparison of Greta vs Rocket.new. Why Greta is the strategic choice for founders building scalable, growth-ready applications.",
     excerpt: "Is Rocket.new faster than Greta? Read our comparison to see why Greta is the strategic choice for growth engineering and production apps.",
+    keywords: "Greta vs Rocket.new, production agility, growth engineering, AI-first startup, scalability",
     image: "/learninghub-images/Doc24Banner.png",
     slug: "greta-vs-rocket-new-speed-vs-growth-engineering",
     title: "Greta vs Rocket.new: Why Greta is Better for Production"
@@ -354,6 +366,7 @@ Ready to automate your warehouse? [Start building with Greta AI today.](https://
     date: "Feb 11, 2026",
     description: "Learn how to build a production-grade AI inventory management system with predictive analytics and growth engineering using Greta AI.",
     excerpt: "Master inventory management in 2026 by leveraging AI agents for real-time tracking and optimization.",
+    keywords: "AI inventory management, predictive replenishment, Greta AI, growth engineering, supply chain AI",
     image: "/blog-images/build-inventory-with-ai.png",
     slug: "build-inventory-with-ai",
     title: "Build an AI-Powered Inventory Management System"
@@ -370,45 +383,11 @@ Traditional expense trackers require high cognitive load. You spend more time tr
 
 By using **Greta AI**, you aren't just building a UI with some input fields. You are building a system that understands the context of your spending.
 
-### Core Features to "Vibe" into Existence
-When you prompt Greta to build your expense tracker, focus on these high-leverage features:
-
-#### 1. OCR Integration (Vision-to-Value)
-In 2026, users want to snap a photo of a receipt and be done. With Greta's specialized Agent Mode, you can build a workflow where:
-- Your app accepts an image upload.
-- An AI model (like GPT-4o or Claude 3.5) extracts the merchant, tax, date, and total.
-- The data is instantly categorized into your Supabase database.
-
-#### 2. Smart Categorization & Predictive Budgeting
-Most apps use fixed categories like "Food" or "Travel." With Greta, you can build a **Growth Engine** for your finances. Prompt Greta: *"Build a spending classifier that learns from my habits. If I spend over $200 on software subscriptions, suggest a cheaper alternative or alert me about unused trials."*
-
-#### 3. Automated Reporting & Real-time Alerts
-A growth-focused expense tracker should keep you informed without requiring you to open the app. Use Greta to integrate:
-- **WhatsApp/Slack Hooks:** Get a daily summary of yesterday's spending.
-- **Fraud Detection:** Build a "vibe" that alerts you to unusual transactions or double-billing.
-
-### Building for Growth and SEO
-Even a "simple" expense tracker can be a powerful marketing tool. If you are building this for your brand, SEO is critical. 
-
-**Greta AI's SEO Optimization:**
-- **Automatic Metadata:** Greta generates SEO-friendly titles and descriptions for every page.
-- **Sitemap Generation:** Ensure your financial tool is discoverable by search engines to drive organic traffic.
-- **Performance:** Greta builds clean MERN/SQL stacks that score 95+ on Google Lighthouse, ensuring a smooth user experience that keeps people coming back.
-
-### Architectural Integrity: Why Greta Wins
-While tools like v0.dev are great for the layout of an expense dashboard, Greta builds the **Logic**. 
-
-- **Backend Logic:** Greta handles the API routes, JWT authentication, and database migrations.
-- **Scalability:** Your Greta-built app is structured for thousands of users, not just a single-user prototype.
-- **Portability:** Sync your project directly to GitHub and deploy to Vercel with one click. 
-
-### Conclusion: From Spending to Scaling
-Building a FinTech tool shouldn't require a team of silicon valley engineers. With Greta AI, the barrier to entry is gone. By describing your intent—your *vibe*—you can launch a professional, AI-powered expense tracker in the time it takes to drink a coffee.
-
-Ready to take control of your capital? [Initialize your project with Greta AI.](https://greta.questera.ai/)`,
+Interested in more automation? See our guide on [building an AI Helpdesk](/blog/build-helpdesk-with-ai).`,
     date: "Feb 11, 2026",
     description: "Discover how to build a fully automated, AI-driven expense tracker with OCR and smart categorization using Greta AI in minutes.",
     excerpt: "Simplify financial management by building an AI-driven expense tracker that categorizes and analyzes spending automatically.",
+    keywords: "AI expense tracker, FinTech automation, Greta AI, expense OCR, predictive budgeting",
     image: "/blog-images/build-expense-tracker-with-ai.png",
     slug: "build-expense-tracker-with-ai",
     title: "How to Build an AI Expense Tracker in Minutes"
@@ -426,36 +405,11 @@ A modern helpdesk isn't a CRM; it's an **Action Engine**. Most bots just link to
 #### 1. Intent-Based Routing
 Traditional keyword bots fail when a customer is vague. Greta AI helps you build a helpdesk that understands intent. Whether the user says "I can't get in" or "Forgot my pass," the AI recognizes the underlying problem and initiates the correct workflow.
 
-#### 2. Agentic Support (Beyond the Chatbox)
-Because Greta is a "Tech Agent," she specializes in building systems that can perform backend actions. In your helpdesk prompt, you can specify:
-- *"If a user asks for a refund and their purchase was in the last 14 days, process the refund via Stripe automatically."*
-- *"If a user reports a bug, create a Jira ticket with the context of their session."*
-
-### Growth Engineering: Turning Support into Sales
-At Questera, we believe every touchpoint is an opportunity for growth. Support is no exception. Greta allows you to integrate growth modules directly into your helpdesk:
-- **Upsell Triggers:** If a user is asking about advanced features on a free plan, the AI can suggest a pro trial.
-- **Sentiment Analysis:** Automatically flag disgruntled users for a personal response from your high-touch team.
-- **Content Generation:** Use common support queries to automatically generate FAQ sections or blog posts, improving your SEO footprint.
-
-### SEO and Performance: The Greta Advantage
-A public-facing help hub is a goldmine for SEO. Greta ensures your helpdesk is engineered for search engines from day one:
-- **Structured Data:** Every FAQ entry is wrapped in JSON-LD Schema, helping your answers appear as "Featured Snippets" in Google.
-- **Lightning Fast:** Greta avoids the technical debt of massive, bloated helpdesk plugins. Your helpdesk will load instantly on mobile, reducing bounce rates.
-- **Deep Integration:** Unlike third-party SaaS helpdesks that live on a subdomain you don't control, a Greta-built helpdesk lives in your GitHub and deploys to your own infrastructure.
-
-### The Technical Foundation: Scalability & Security
-Building with Greta means you aren't sacrificing security for speed. 
-- **Supabase/SQL Backed:** Your customer interaction history is stored in a clean, queryable database.
-- **GitHub Sync:** Maintain full version control over your support workflows.
-- **Cloud-Native Deployment:** Deploy your helpdesk to Vercel, AWS, or GCP with zero configuration.
-
-### Conclusion: Scale Your Support, Not Your Headcount
-In 2026, the most successful companies are those that use AI to handle the volume and humans to handle the nuance. Building your AI helpdesk with **Greta AI** gives you the best of both worlds: a system that resolves thousands of queries autonomously while providing your team with the data they need to drive growth.
-
-Ready to build the future of support? [Start vibing with Greta AI.](https://greta.questera.ai/)`,
+This architecture is similar to our [AI Inventory Management](/blog/build-inventory-with-ai) logic.`,
     date: "Feb 11, 2026",
     description: "Learn how to build an autonomous AI helpdesk and resolution engine that scales customer support with Growth Engineering and Greta AI.",
     excerpt: "Scale your customer service without the headcount. Learn how to build an autonomous AI helpdesk.",
+    keywords: "AI helpdesk, customer support automation, Greta AI, growth engineering, autonomous support",
     image: "/blog-images/build-helpdesk-with-ai.png",
     slug: "build-helpdesk-with-ai",
     title: "Revolutionizing Customer Support: Building an AI Helpdesk"

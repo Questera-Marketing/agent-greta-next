@@ -1,33 +1,21 @@
-'use client';
-
 import { blogs } from '@/components/blog/blogData';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import { BlogTopBar } from '@/components/blog/BlogTopBar';
+import { Metadata } from 'next';
 
-const TopBar = () => {
-    const router = useRouter();
-
-    return (
-        <div className="h-[64px] border-b border-zinc-900 flex items-center justify-between px-8 bg-black fixed top-0 left-0 right-0 z-50">
-            <div className="flex items-center gap-4">
-                <div className="cursor-pointer" onClick={() => router.push("/")}>
-                    <Image alt="Greta Logo" width={90} height={25} src="/Gretanewlogo.svg" className="invert brightness-[1.2]" />
-                </div>
-            </div>
-            <div className="flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">
-                <Link href="/learninghub" className="hover:text-white transition-all">Documentation</Link>
-                <button onClick={() => window.open("https://greta.questera.ai/home", "_blank")} className="bg-white text-black px-5 py-2 rounded-full hover:bg-zinc-200 transition-all">Launch App</button>
-            </div>
-        </div>
-    );
+export const metadata: Metadata = {
+  title: 'Blog | Greta Protocol Updates',
+  description: 'The latest insights on vibe coding, growth engineering, and technical protocols from the Greta core team.',
+  alternates: {
+    canonical: 'https://greta.questera.ai/blog',
+  },
 };
 
 export default function BlogIndexPage() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
-      <TopBar />
+      <BlogTopBar />
       <main className="max-w-6xl mx-auto px-8 pt-48 pb-32">
         <div className="mb-32 border-l border-zinc-900 pl-10">
           <div className="text-zinc-600 text-[10px] font-black uppercase tracking-[0.4em] mb-4">Engineering Log v1.0</div>
