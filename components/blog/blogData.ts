@@ -304,114 +304,159 @@ Summary: Vibe coding represents the ultimate abstraction layer. By combining hum
     title: "Vibe Coding Explained: From Traditional Coding to AI-Driven Development",
   },
   {
-    title: "How to Build a CRM with AI in 2026",
-    slug: "build-crm-with-ai",
-    category: "Tutorials",
-    excerpt: "Learn how to build a production-ready CRM using AI agents and modern growth engineering principles.",
-    date: "Feb 10, 2026",
-    author: "Pankaj Vashisht",
-    image: "/blog-images/build-crm-with-ai.png",
-    content: `## Building the Future of Sales
-
-The CRM is the heart of any business. In 2026, building one doesn't take months of manual coding. With **Greta AI**, you can vibe-code a CRM that understands your customers better than you do.
-
-### Step 1: Defining the Schema
-Use natural language to describe your data needs: "I need a CRM that tracks leads, deals, and automated follow-ups with Supabase integration."
-
-### Step 2: AI Execution
-Greta generates the backend logic and the frontend components sequentially, ensuring architectural integrity.
-
-### Step 3: Growth Loops
-Integrate automated email sequences and lead scoring directly into the core platform.`
-  },
-  {
-    title: "Building an LMS with AI: A Step-by-Step Guide",
-    slug: "build-lms-with-ai",
-    category: "Tutorials",
-    excerpt: "Discover the fastest way to launch a Learning Management System using AI-driven development.",
-    date: "Feb 10, 2026",
-    author: "Pankaj Vashisht",
-    image: "/blog-images/build-lms-with-ai.png",
-    content: "## Education Reimagined"
-  },
-  {
-    title: "HRMS Development in the Era of AI Agents",
-    slug: "build-hrms-with-ai",
+    title: "Build an AI-Powered Inventory Management System",
+    slug: "build-inventory-with-ai",
     category: "Engineering",
-    excerpt: "Modernize your HR processes by building a custom HRMS with AI-powered automation.",
-    date: "Feb 10, 2026",
+    excerpt: "Master inventory management in 2026 by leveraging AI agents for real-time tracking and optimization.",
+    date: "Feb 11, 2026",
     author: "Pankaj Vashisht",
-    image: "/blog-images/build-hrms-with-ai.png",
-    content: "## People Operations 2.0"
+    image: "/blog-images/build-inventory-with-ai.png",
+    content: `## The Future of Warehousing
+
+Inventory management is no longer just about counting boxes. In 2026, it's about predictive replenishment and autonomous stock tracking. With **Greta AI**, building a production-ready inventory system becomes an exercise in high-level intent.
+
+### Why AI-First Inventory?
+1. **Predictive Analytics:** AI can forecast demand spikes before they happen.
+2. **Automated Audits:** Use vision-integrated agents to reconcile physical and digital stock.
+3. **Seamless Integration:** Connect your warehouse directly to your marketplace via unified AI schemas.`
   },
   {
-    title: "The Ultimate Guide to Building a POS with AI",
-    slug: "build-pos-with-ai",
+    title: "How to Build an AI Expense Tracker in Minutes",
+    slug: "build-expense-tracker-with-ai",
     category: "Tutorials",
-    excerpt: "From retail to restaurants, see how AI is simplifying Point of Sale system development.",
-    date: "Feb 10, 2026",
+    excerpt: "Simplify financial management by building an AI-driven expense tracker that categorizes and analyzes spending automatically.",
+    date: "Feb 11, 2026",
     author: "Pankaj Vashisht",
-    image: "/blog-images/build-pos-with-ai.png",
-    content: "## Modern Commerce"
+    image: "/blog-images/build-expense-tracker-with-ai.png",
+    content: `## FinTech for Everyone
+
+The days of manual receipt entry are over. Vibe coding allows you to build a financial tool that does the heavy lifting for you.
+
+### Core Features to Vibe
+- **OCR Integration:** Snap a photo, and let Greta extract the merchant, tax, and total.
+- **Smart Categorization:** AI that learns your spending habits.
+- **Reporting:** Automatic monthly summaries delivered via WhatsApp or Slack.`
   },
   {
-    title: "ERP Systems: Building with AI for Scale",
-    slug: "build-erp-with-ai",
+    title: "Revolutionizing Customer Support: Building an AI Helpdesk",
+    slug: "build-helpdesk-with-ai",
     category: "Engineering",
-    excerpt: "Complex ERP architectures are now manageable with AI-driven growth engineering.",
-    date: "Feb 10, 2026",
+    excerpt: "Scale your customer service without the headcount. Learn how to build an autonomous AI helpdesk.",
+    date: "Feb 11, 2026",
     author: "Pankaj Vashisht",
-    image: "/blog-images/build-erp-with-ai.png",
-    content: "## Enterprise Resource Planning"
+    image: "/blog-images/build-helpdesk-with-ai.png",
+    content: `## 24/7 Support with Zero Burnout
+
+A modern helpdesk isn't a ticketing system; it's a resolution engine. By building with **Greta AI**, you're creating a system that learns from every interaction.
+
+### The Agentic Helpdesk
+Unlike traditional keyword-based bots, an AI helpdesk built on Greta's infrastructure understands intent. It can perform actions—like resetting passwords or processing refunds—rather than just linking to documentation.`
   },
   {
-    title: "Build a Real-time Chat App with AI",
-    slug: "build-chat-app-with-ai",
-    category: "Tutorials",
-    excerpt: "Master real-time communication by building an AI-enhanced chat application.",
-    date: "Feb 10, 2026",
-    author: "Pankaj Vashisht",
-    image: "/blog-images/build-chat-app-with-ai.png",
-    content: "## Communication at Scale"
-  },
-  {
-    title: "Custom Dashboards: The AI Engineering Way",
-    slug: "build-dashboard-with-ai",
+    title: "Building a Modern CMS with AI Growth Engines",
+    slug: "build-cms-with-ai",
     category: "Engineering",
-    excerpt: "Create insightful data visualizations and dashboards using automated AI tools.",
-    date: "Feb 10, 2026",
+    excerpt: "Why settle for static when you can build a CMS that optimizes content for SEO and conversion automatically?",
+    date: "Feb 11, 2026",
     author: "Pankaj Vashisht",
-    image: "/blog-images/build-dashboard-with-ai.png",
-    content: "## Visualizing Insights"
+    image: "/blog-images/build-cms-with-ai.png",
+    content: `## Content Management 3.0
+
+The CMS of 2026 is an active participant in your growth. It doesn't just store markdown; it suggests titles, generates OG images, and tracks performance in real-time.
+
+### Vibe Coding your CMS
+Using Greta, you can describe a content workflow: "Build a CMS where I provide a topic, and it generates a draft, suggests SEO keywords, and creates a distribution plan."`
   },
   {
-    title: "Building Analytics Engines with AI Agents",
-    slug: "build-analytics-with-ai",
-    category: "Data Science",
-    excerpt: "Turn raw data into actionable growth with your own AI-powered analytics engine.",
-    date: "Feb 10, 2026",
-    author: "Pankaj Vashisht",
-    image: "/blog-images/build-analytics-with-ai.png",
-    content: "## Data to Decision"
-  },
-  {
-    title: "The Marketplace Protocol: Building with AI",
-    slug: "build-marketplace-with-ai",
+    title: "The Return of Community: Building an AI-Moderated Forum",
+    slug: "build-forum-with-ai",
     category: "Tutorials",
-    excerpt: "Launch a scalable multi-vendor marketplace using AI-first development strategies.",
-    date: "Feb 10, 2026",
+    excerpt: "Scale your community safely. Build a forum with built-in AI moderation and sentiment analysis.",
+    date: "Feb 11, 2026",
     author: "Pankaj Vashisht",
-    image: "/blog-images/build-marketplace-with-ai.png",
-    content: "## Scalable Marketplaces"
+    image: "/blog-images/build-forum-with-ai.png",
+    content: `## Communities that Scale
+
+Building a forum used to be easy, but moderating it was hard. In 2026, AI agents handle the noise so you can focus on the signal.
+
+### Features of the Next-Gen Forum
+- **Real-time Moderation:** Block spam and toxicity before it's seen.
+- **AI Summation:** Summarize long threads for quick catch-ups.
+- **Contributor Scoring:** Automatically reward helpful members based on sentiment.`
   },
   {
-    title: "Booking Systems: Engineered for Conversion",
-    slug: "build-booking-system-with-ai",
+    title: "Launch an AI-First Blog Platform for Your Brand",
+    slug: "build-blog-platform-with-ai",
     category: "Tutorials",
-    excerpt: "Build a seamless booking experience for your users with AI automation.",
-    date: "Feb 10, 2026",
+    excerpt: "Stop fighting with WordPress. Build a lean, SEO-first blog platform using Next.js and AI.",
+    date: "Feb 11, 2026",
     author: "Pankaj Vashisht",
-    image: "/blog-images/build-booking-system-with-ai.png",
-    content: "## Frictionless Bookings"
-  }
+    image: "/blog-images/build-blog-platform-with-ai.png",
+    content: `## Narrative Control
+
+Your blog is your voice. In 2026, it should be fast, secure, and AI-native. Building a custom platform with **Greta AI** ensures you own the data and the growth engine.
+
+### Building for SEO
+A Greta-built blog comes pre-optimized. From JSON-LD structured data to automatic sitemap generation, every post is engineered to rank from the moment you hit "Publish".`
+  },
+  {
+    title: "Build a High-Converting Portfolio with AI",
+    slug: "build-portfolio-with-ai",
+    category: "Tutorials",
+    excerpt: "Showcase your work with a portfolio that isn't just a resume—it's a conversion machine.",
+    date: "Feb 11, 2026",
+    author: "Pankaj Vashisht",
+    image: "/blog-images/build-portfolio-with-ai.png",
+    content: `## Your Digital Identity
+
+For a developer or designer in 2026, your portfolio is your most important product. Vibe coding allows you to build a site that dynamically adapts to the person viewing it.
+
+### Personalization at Scale
+Imagine a portfolio that highlights your React skills when a frontend lead visits, but shows your architecture diagrams to a CTO. With Greta, building this level of intelligence is just a prompt away.`
+  },
+  {
+    title: "AI Resume Builder: From Data to Dream Job",
+    slug: "build-resume-builder-with-ai",
+    category: "Tutorials",
+    excerpt: "Build a tool that helps users generate ATS-friendly resumes that actually get interviews.",
+    date: "Feb 11, 2026",
+    author: "Pankaj Vashisht",
+    image: "/blog-images/build-resume-builder-with-ai.png",
+    content: `## Beating the Bots
+
+Job hunting is an engineering problem. Build a resume builder that uses AI to analyze job descriptions and optimize content in real-time.
+
+### Architectural Integrity
+This isn't just a PDF generator. By building with Greta, you're creating a secure repository for professional data that can be queried and formatted for any platform—from LinkedIn to custom job portals.`
+  },
+  {
+    title: "The Future of Hiring: Building an AI Job Portal",
+    slug: "build-job-portal-with-ai",
+    category: "Engineering",
+    excerpt: "Connect talent with opportunity faster by building an AI-powered job board.",
+    date: "Feb 11, 2026",
+    author: "Pankaj Vashisht",
+    image: "/blog-images/build-job-portal-with-ai.png",
+    content: `## Marketplace for Talent
+
+Traditional job boards are broken. We need systems that understand skills, not just keywords. **Greta AI** makes it possible to build a portal that truly matches candidates to companies.
+
+### The Matching Engine
+Vibe code a system that ranks candidates based on project history and skill-density, providing recruiters with a curated shortlist rather than a pile of resumes.`
+  },
+  {
+    title: "Scale Your Knowledge: Building a Learning Platform with AI",
+    slug: "build-learning-platform-with-ai",
+    category: "Engineering",
+    excerpt: "The future of education is adaptive. Build a platform that learns with its students.",
+    date: "Feb 11, 2026",
+    author: "Pankaj Vashisht",
+    image: "/blog-images/build-learning-platform-with-ai.png",
+    content: `## Adaptive Education
+
+LMS platforms should do more than just host videos. In 2026, they should provide personalized learning paths.
+
+### Building with Intent
+Using Greta, you can build a platform where the AI acts as a tutor, summarizing complex topics and generating custom quizzes based on the student's progress.`
+  },
 ];
