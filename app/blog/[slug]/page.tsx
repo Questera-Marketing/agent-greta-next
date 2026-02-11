@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const baseUrl = 'https://greta.questera.ai'; // Update with actual domain if different
+  const baseUrl = 'https://www.greta.sh'; // Canonical domain updated to greta.sh
   const url = `${baseUrl}/blog/${slug}`;
 
   return {

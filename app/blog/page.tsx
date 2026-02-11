@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Blog | Greta Protocol Updates',
   description: 'The latest insights on vibe coding, growth engineering, and technical protocols from the Greta core team.',
   alternates: {
-    canonical: 'https://greta.questera.ai/blog',
+    canonical: 'https://www.greta.sh/blog',
   },
 };
 
