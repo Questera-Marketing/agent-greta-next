@@ -30,7 +30,7 @@ Greta isn't just about code; it's about the entire lifecycle. With built-in modu
     date: "Jan 28, 2026",
     description: "A deep dive into why architectural integrity makes Greta the superior choice for production-grade AI development over prototyping tools like Lovable.",
     excerpt: "Detailed comparison of AI app builders. Why Greta the Growth Engineering Tech Agent is the superior choice for production apps.",
-    keywords: "AI app builder, Greta vs Lovable, production-ready AI, growth engineering, vibe coding",
+    keywords: "AI app builder, Greta vs Lovable, production-ready AI, growth engineering, vibe coding, AI agents 2026",
     image: "/learninghub-images/Doc26Banner.png",
     slug: "greta-vs-lovable-why-greta-wins-at-vibe-coding",
     title: "Greta vs Lovable: Why Greta Wins at Vibe Coding"
@@ -51,7 +51,7 @@ Want to see how Greta builds real-world apps? [Check out our guide on building a
     date: "Jan 28, 2026",
     description: "Comparing Greta's cloud-native infrastructure with Bolt.new's browser-based containers for real-world application performance.",
     excerpt: "Why Greta is the preferred choice for full-stack AI agents compared to browser-based containers like Bolt.",
-    keywords: "Greta vs Bolt.new, cloud-native AI, scalability, production AI apps, growth engineering",
+    keywords: "Greta vs Bolt.new, cloud-native AI, scalability, production AI apps, growth engineering, software architecture 2026",
     image: "/learninghub-images/Doc13Banner.png",
     slug: "greta-vs-bolt-new-performance-and-scalability",
     title: "Greta vs Bolt.new: Built for Performance & Scalability"
@@ -76,7 +76,7 @@ Compare how we approach architecture vs [v0's UI-centric model](/blog/greta-vs-v
     date: "Jan 28, 2026",
     description: "A technical comparison between Replit Agent and Greta. Why founding engineers choose Greta for scalable AI applications.",
     excerpt: "Replit is a legendary IDE, but is their agent ready for growth engineering? Compare Greta and Replit for your next startup.",
-    keywords: "Greta vs Replit Agent, vibe coding, growth engineering, production AI, startup scalability",
+    keywords: "Greta vs Replit Agent, vibe coding, growth engineering, production AI, startup scalability, AI code editors",
     image: "/learninghub-images/Doc35Banner.png",
     slug: "greta-vs-replit-agent-production-logic-vs-column-ide",
     title: "Greta vs. Replit Agent: Production Logic vs. Cloud IDE"
@@ -93,7 +93,7 @@ Greta handles state management, API integrations, and backend logic that static 
     date: "Jan 25, 2026",
     description: "Comparing v0.dev and Greta for production-ready full-stack applications.",
     excerpt: "v0 is great for UI, but Greta builds the logic. See why Greta is the choice for functional AI applications.",
-    keywords: "v0.dev vs Greta, full-stack AI, UI vs logic, AI app development, growth engineering",
+    keywords: "v0.dev vs Greta, full-stack AI, UI vs logic, AI app development, growth engineering, React AI components",
     image: "/learninghub-images/Doc2Banner.png",
     slug: "greta-vs-v0-from-ui-to-full-stack",
     title: "Greta vs v0.dev: Transitioning from UI to Full-Stack"
@@ -127,7 +127,7 @@ Ready to start? [Build your first app with Greta AI](https://greta.questera.ai/h
     date: "Jan 29, 2026",
     description: "A detailed comparison of Greta vs Rocket.new. Why Greta is the strategic choice for founders building scalable, growth-ready applications.",
     excerpt: "Is Rocket.new faster than Greta? Read our comparison to see why Greta is the strategic choice for growth engineering and production apps.",
-    keywords: "Greta vs Rocket.new, production agility, growth engineering, AI-first startup, scalability",
+    keywords: "Greta vs Rocket.new, production agility, growth engineering, AI-first startup, scalability, dev speed 2026",
     image: "/learninghub-images/Doc24Banner.png",
     slug: "greta-vs-rocket-new-speed-vs-growth-engineering",
     title: "Greta vs Rocket.new: Why Greta is Better for Production"
@@ -226,6 +226,7 @@ Ready to start your vibe coding journey? Building with **Greta AI** ensures that
     date: "Feb 3, 2026",
     description: "Explore the revolution of Vibe Coding in 2026. Learn the meaning, see real-world examples, and discover why Greta AI is the future of software development.",
     excerpt: "What is vibe coding? Discover how human intent and AI execution are redefining software engineering in 2026.",
+    keywords: "vibe coding, AI software development, engineering trends 2026, natural language programming, Greta AI, intent-based engineering",
     image: "/learninghub-images/Doc11Banner.png",
     slug: "what-is-vibe-coding-meaning-examples-software-development-2026",
     title: "What Is Vibe Coding? Meaning, Examples & Why It’s Changing Software Development"
@@ -314,6 +315,7 @@ Summary: Vibe coding represents the ultimate abstraction layer. By combining hum
     date: "Feb 3, 2026",
     description: "Learn the difference between traditional coding and vibe coding. A deep dive into AI-driven development, natural language programming, and the future of software engineering.",
     excerpt: "Vibe coding explained: How AI-driven development is transforming how we build software, from traditional syntax to natural language intent.",
+    keywords: "vibe coding explained, traditional vs AI coding, natural language programming, software engineering future, Greta AI, code abstraction",
     image: "/learninghub-images/Doc11Image2.png",
     slug: "vibe-coding-explained-traditional-vs-ai-driven-development",
     title: "Vibe Coding Explained: From Traditional Coding to AI-Driven Development"
@@ -366,7 +368,7 @@ Ready to automate your warehouse? [Start building with Greta AI today.](https://
     date: "Feb 11, 2026",
     description: "Learn how to build a production-grade AI inventory management system with predictive analytics and growth engineering using Greta AI.",
     excerpt: "Master inventory management in 2026 by leveraging AI agents for real-time tracking and optimization.",
-    keywords: "AI inventory management, predictive replenishment, Greta AI, growth engineering, supply chain AI",
+    keywords: "AI inventory management, predictive replenishment, Greta AI, growth engineering, supply chain AI, autonomous warehouse",
     image: "/blog-images/build-inventory-with-ai.png",
     slug: "build-inventory-with-ai",
     title: "Build an AI-Powered Inventory Management System"
@@ -387,7 +389,7 @@ Interested in more automation? See our guide on [building an AI Helpdesk](/blog/
     date: "Feb 11, 2026",
     description: "Discover how to build a fully automated, AI-driven expense tracker with OCR and smart categorization using Greta AI in minutes.",
     excerpt: "Simplify financial management by building an AI-driven expense tracker that categorizes and analyzes spending automatically.",
-    keywords: "AI expense tracker, FinTech automation, Greta AI, expense OCR, predictive budgeting",
+    keywords: "AI expense tracker, FinTech automation, Greta AI, expense OCR, predictive budgeting, smart finance",
     image: "/blog-images/build-expense-tracker-with-ai.png",
     slug: "build-expense-tracker-with-ai",
     title: "How to Build an AI Expense Tracker in Minutes"
@@ -409,7 +411,7 @@ This architecture is similar to our [AI Inventory Management](/blog/build-invent
     date: "Feb 11, 2026",
     description: "Learn how to build an autonomous AI helpdesk and resolution engine that scales customer support with Growth Engineering and Greta AI.",
     excerpt: "Scale your customer service without the headcount. Learn how to build an autonomous AI helpdesk.",
-    keywords: "AI helpdesk, customer support automation, Greta AI, growth engineering, autonomous support",
+    keywords: "AI helpdesk, customer support automation, Greta AI, growth engineering, autonomous support, intent-based routing",
     image: "/blog-images/build-helpdesk-with-ai.png",
     slug: "build-helpdesk-with-ai",
     title: "Revolutionizing Customer Support: Building an AI Helpdesk"
@@ -464,6 +466,7 @@ Ready to rule your niche? [Build your Growth CMS with Greta AI.](https://greta.q
     date: "Feb 11, 2026",
     description: "Build an AI-first CMS that goes beyond storage to include automated SEO, content generation, and distribution using Greta AI.",
     excerpt: "Why settle for static when you can build a CMS that optimizes content for SEO and conversion automatically?",
+    keywords: "Modern CMS, AI content management, Greta AI, growth engineering, SEO automation, CMS 3.0",
     image: "/blog-images/build-cms-with-ai.png",
     slug: "build-cms-with-ai",
     title: "Building a Modern CMS with AI Growth Engines"
@@ -513,6 +516,7 @@ Ready to unite your audience? [Launch your community with Greta AI.](https://gre
     date: "Feb 11, 2026",
     description: "Learn how to build a safe and scalable community platform with autonomous AI moderation and gamification using Greta AI.",
     excerpt: "Scale your community safely. Build a forum with built-in AI moderation and sentiment analysis.",
+    keywords: "AI moderated forum, community building 2026, Greta AI, autonomous moderation, digital campfires, sentiment analysis",
     image: "/blog-images/build-forum-with-ai.png",
     slug: "build-forum-with-ai",
     title: "The Return of Community: Building an AI-Moderated Forum"
@@ -559,6 +563,7 @@ Ready to publish? [Start your blog journey with Greta AI.](https://greta.quester
     date: "Feb 11, 2026",
     description: "Discover how to build an SEO-first, AI-native blog platform that gives you full control over your content and growth using Greta AI.",
     excerpt: "Stop fighting with WordPress. Build a lean, SEO-first blog platform using Next.js and AI.",
+    keywords: "AI blog platform, SEO first blog, Greta AI, growth engineering, narrative control, Next.js blog",
     image: "/blog-images/build-blog-platform-with-ai.png",
     slug: "build-blog-platform-with-ai",
     title: "Launch an AI-First Blog Platform for Your Brand"
@@ -610,6 +615,7 @@ Ready to stand out? [Build your intelligent portfolio with Greta AI.](https://gr
     date: "Feb 11, 2026",
     description: "Learn how to build a dynamic, AI-powered portfolio that personalizes itself for visitors and converts leads using Greta AI.",
     excerpt: "Showcase your work with a portfolio that isn't just a resume—it's a conversion machine.",
+    keywords: "AI portfolio builder, high-converting portfolio, Greta AI, digital identity, creators 2026, personal branding",
     image: "/blog-images/build-portfolio-with-ai.png",
     slug: "build-portfolio-with-ai",
     title: "Build a High-Converting Portfolio with AI"
