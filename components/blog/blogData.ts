@@ -1,5 +1,5 @@
 
-import { imageConfig } from './ImageConfig';
+import { imageConfig } from '../learninghub/ImageConfig';
 
 export interface BlogItem {
   title: string;
@@ -13,7 +13,7 @@ export interface BlogItem {
   description?: string;
 }
 
-export const blogData: BlogItem[] = [
+export const blogs: BlogItem[] = [
   {
     author: "Pankaj Vashisht",
     category: "Comparisons",
