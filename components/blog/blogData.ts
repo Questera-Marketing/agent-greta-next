@@ -4,19 +4,21 @@ import { imageConfig } from '../learninghub/ImageConfig';
 export interface BlogItem {
   title: string;
   slug: string;
+  excerpt: string;
+  content: string;
   date: string;
   author: string;
   category: string;
-  excerpt: string;
-  content: string;
   image?: string;
-  description?: string;
-  keywords?: string;
+  description: string;
+  keywords: string;
 }
 
 export const blogs: BlogItem[] = [
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: The New Era of Connection with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: the new era of connection, AI builder",
     category: "Engineering",
     content: `# How to Build a Production-Ready AI Dating App in 2026
 
@@ -99,6 +101,8 @@ The digital dating landscape in 2026 has transcended the "swipe-left, swipe-righ
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: The Logistics Shift with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: the logistics shift, AI builder",
     category: "Engineering",
     content: `# How to Build an Autonomous AI Food Delivery System in 2026
 
@@ -182,6 +186,8 @@ By 2026, the food delivery market has shifted from "Aggregators" to "Owned Infra
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: The Mobility Reinvention with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: the mobility reinvention, AI builder",
     category: "Engineering",
     content: `# Building a production-grade Ride-Sharing Platform in 2026
 
@@ -257,6 +263,8 @@ As we enter 2026, the era of the "Generalist Uber" is giving way to high-precisi
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: The Financial Infrastructure Revolution with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: the financial infrastructure revolution, AI builder",
     category: "FinTech",
     content: `# How to Build a Scalable AI Payment Gateway in 2026
 
@@ -331,6 +339,8 @@ In 2026, the global movement of money has become almost entirely software-define
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: The Everywhere Subscription Economy with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: the everywhere subscription economy, AI builder",
     category: "SaaS",
     content: `# How to Build a Flexible AI Subscription Management System in 2026
 
@@ -406,6 +416,8 @@ In 2026, the subscription model has evolved beyond simple monthly payments. We n
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: The New Word-of-Mouth with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: the new word-of-mouth, AI builder",
     category: "Marketing",
     content: `# How to Build an AI-Driven Affiliate and Referral Platform in 2026
 
@@ -485,6 +497,8 @@ By 2026, the marketing landscape has been completely decentralized. Traditional 
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: The Data Intelligence Leap with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: the data intelligence leap, AI builder",
     category: "Productivity",
     content: `# How to Build an Autonomous AI Survey Engine in 2026
 
@@ -558,6 +572,8 @@ In 2026, the era of the "static questionnaire" is dead. With the explosion of ge
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: The Gamification of Authority with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: the gamification of authority, AI builder",
     category: "Tutorials",
     content: `# How to Building a high-performance AI Quiz Platform in 2026
 
@@ -631,6 +647,8 @@ In 2026, the humble quiz has evolved from a "Buzzfeed-style" distraction into a 
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: Reclaiming the Inbox with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: reclaiming the inbox, AI builder",
     category: "Marketing",
     content: `# How to Build an AI-First Email Marketing and Automation Platform in 2026
 
@@ -704,6 +722,8 @@ By 2026, the era of the "unsolicited blast" is officially over. With the integra
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Introduction: The Death of the Static Board with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, introduction: the death of the static board, AI builder",
     category: "Productivity",
     content: `# How to Build an Autonomous AI Project Orchestration Engine in 2026
 
@@ -1382,6 +1402,8 @@ Ready to stand out? [Build your intelligent portfolio with Greta AI.](https://gr
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Beating the Bots: Build an AI Resume Builder with Greta with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, beating the bots: build an ai resume builder with greta, AI builder",
     category: "Tutorials",
     content: `## Beating the Bots: Build an AI Resume Builder with Greta
 
@@ -1428,6 +1450,8 @@ Ready to hack the hiring process? [Build your AI resume builder with Greta AI.](
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Marketplace for Talent: The Future of Hiring and Job Portals with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, marketplace for talent: the future of hiring and job portals, AI builder",
     category: "Engineering",
     content: `## Marketplace for Talent: The Future of Hiring and Job Portals
 
@@ -1475,6 +1499,8 @@ Ready to disrupt hiring? [Initialize your talent marketplace with Greta AI.](htt
   },
   {
     author: "Pankaj Vashisht",
+    description: "Learn about Scale Your Knowledge: Building a Learning Platform with AI with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, scale your knowledge: building a learning platform with ai, AI builder",
     category: "Engineering",
     content: `## Scale Your Knowledge: Building a Learning Platform with AI
 
@@ -1521,6 +1547,8 @@ Ready to share your wisdom? [Start building your LMS with Greta AI.](https://gre
   },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about The Evolution of CRM in 2026: From Static Databases to Agentic Growth Engines with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, the evolution of crm in 2026: from static databases to agentic growth engines, AI builder",
   category: "Engineering",
   title: "Building a Production-Ready AI CRM: Beyond Prototypes with Greta",
   slug: "build-crm-with-ai",
@@ -1589,6 +1617,8 @@ Ready to dominate your market? [Start building your AI CRM with Greta today.](ht
 },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about The Adaptive Education Revolution of 2026 with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, the adaptive education revolution of 2026, AI builder",
   category: "Engineering",
   title: "Building an Adaptive AI LMS: Personalizing Education at Scale",
   slug: "build-lms-with-ai",
@@ -1651,6 +1681,8 @@ Ready to lead the education revolution? [Launch your AI LMS with Greta today.](h
 },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about HR in 2026: From Paperwork to People Growth with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, hr in 2026: from paperwork to people growth, AI builder",
   category: "Engineering",
   title: "Building an AI-Native HRMS: Automating the Modern Workforce",
   slug: "build-hrms-with-ai",
@@ -1713,6 +1745,8 @@ Building an HRMS in 2026 is about more than just "management"; it's about enabli
 },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about The Retail Revolution of 2026 with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, the retail revolution of 2026, AI builder",
   category: "Engineering",
   title: "Building an AI-Powered POS: The Future of Retail Engineering",
   slug: "build-pos-with-ai",
@@ -1775,6 +1809,8 @@ Building a POS in 2026 is an ambitious engineering project that requires a balan
 },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about ERP in 2026: The New Era of Autonomous Operations with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, erp in 2026: the new era of autonomous operations, AI builder",
   category: "Engineering",
   title: "Building an AI ERP: The Central Nervous System for Growing Enterprises",
   slug: "build-erp-with-ai",
@@ -1837,6 +1873,8 @@ Don't let the complexity and cost of legacy ERPs hold your business back. In 202
 },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about The Future of Chat in 2026: The Conversation is the Interface with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, the future of chat in 2026: the conversation is the interface, AI builder",
   category: "Engineering",
   title: "Building a Production-Ready AI Chat App: Beyond Simple Messaging",
   slug: "build-chat-app-with-ai",
@@ -1897,6 +1935,8 @@ Chat is the future of how humans, teams, and AI interact. Don't just build anoth
 },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about The End of the Static Dashboard Era with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, the end of the static dashboard era, AI builder",
   category: "Tutorials",
   title: "Building an AI-Driven Dashboard: Transforming Data into Growth",
   slug: "build-dashboard-with-ai",
@@ -1959,6 +1999,8 @@ In 2026, information is cheap, but actionable insight is the most valuable curre
 },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about The Transition to Owned Analytics in 2026 with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, the transition to owned analytics in 2026, AI builder",
   category: "Engineering",
   title: "Building an AI-Native Analytics Platform: Taking Control of Your Data",
   slug: "build-analytics-with-ai",
@@ -2027,6 +2069,8 @@ In 2026, companies that rely on third-party black boxes for their data are at a 
 },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about The Evolution of the Marketplace in 2026 with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, the evolution of the marketplace in 2026, AI builder",
   category: "Engineering",
   title: "Building an AI-Driven Marketplace: Scaling Trust and Transactions",
   slug: "build-marketplace-with-ai",
@@ -2093,6 +2137,8 @@ Marketplaces are the powerhouses of the modern digital economy. Don't let techni
 },
   {
   author: "Pankaj Vashisht",
+    description: "Learn about Why Scheduling is a Massive Engineering Challenge in 2026 with Greta AI, the Growth Engineering Tech Agent.",
+    keywords: "Greta AI, growth engineering, why scheduling is a massive engineering challenge in 2026, AI builder",
   category: "Engineering",
   title: "Building an AI-Powered Booking System: Solving the Complexity of Time",
   slug: "build-booking-system-with-ai",
