@@ -28,7 +28,7 @@ export const Heading1 = ({ children, className, text }: { children: React.ReactN
     const id = content ? content.toLowerCase().trim().split(' ').join('-') : '';
     return (
         <h2
-            className={`${className || ''} text-2xl font-bold leading-[1.3] tracking-tighter mt-24 mb-6 text-white flex items-center gap-3 group border-t border-zinc-900 pt-12`}
+            className={`${className || ''} text-2xl font-bold leading-[1.3] tracking-tighter mt-12 mb-6 text-white flex items-center gap-3 group border-t border-zinc-900 pt-12`}
             data-section-id={id}
             id={id}
         >
