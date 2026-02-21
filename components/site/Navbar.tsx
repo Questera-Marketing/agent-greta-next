@@ -19,10 +19,9 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Features', href: '#features' },
-        { name: 'How it Works', href: '#how-it-works' },
         { name: 'Blog', href: '/blog' },
-        { name: 'Pricing', href: '#pricing' },
+        { name: 'Pricing', href: '/pricing' },
+        { name: 'Learning Hub', href: '/learninghub' },
     ];
 
     return (
@@ -57,16 +56,14 @@ const Navbar = () => {
                             className="text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-500 hover:text-white transition-colors flex items-center gap-2"
                         >
                             {link.name}
-                            {link.name === "Pricing" && (
-                                <span className="bg-white/10 text-white text-[8px] px-1.5 py-0.5 rounded-full border border-white/10">NEW</span>
-                            )}
                         </Link>
                     ))}
                     <Link
                         href="https://greta.questera.ai"
+                        target="_blank"
                         className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold hover:bg-zinc-200 transition-all active:scale-95"
                     >
-                        Login
+                        Get Started
                     </Link>
                 </div>
 

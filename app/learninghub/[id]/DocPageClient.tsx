@@ -26,41 +26,9 @@ import {
 } from 'lucide-react';
 import { data, getDocByLink, DocQuestion } from '@/components/learninghub/data';
 import { docComponents } from '@/components/learninghub/Docs';
-
-// Minimal TopBar
-const TopBar = ({ onOpenSearch, onToggleMobileMenu }: { onOpenSearch: () => void, onToggleMobileMenu: () => void }) => {
-    const router = useRouter();
-
-    return (
-        <div className="h-[64px] border-b border-zinc-900 flex items-center justify-between px-6 bg-black fixed top-0 left-0 right-0 z-50">
-            <div className="flex items-center gap-4">
-                <button onClick={onToggleMobileMenu} className="lg:hidden text-zinc-400">
-                    <Menu size={20} />
-                </button>
-                <div className="cursor-pointer" onClick={() => router.push("/")}>
-                    <Image alt="Greta Logo" width={90} height={25} src="/Gretanewlogo.svg" className="invert brightness-[1.5]" />
-                </div>
-            </div>
-
-            <div className="flex-1 max-w-xl mx-12 hidden md:flex items-center gap-3">
-                <div 
-                    onClick={onOpenSearch}
-                    className="w-full bg-zinc-900/50 border border-zinc-900 rounded-lg py-2 pl-4 pr-12 text-[12px] text-zinc-400 font-bold uppercase tracking-widest cursor-pointer hover:bg-zinc-800 transition-all flex items-center gap-3"
-                >
-                    <Search size={14} className="text-zinc-600" />
-                    <span>Search Documentation...</span>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                        <kbd className="text-[10px] text-zinc-600 font-mono tracking-normal capitalize">⌘K</kbd>
-                    </div>
-                </div>
-            </div>
-
-            <div className="flex items-center gap-6">
-                <button onClick={() => window.open("https://greta.questera.ai/registration", "_blank")} className="bg-white text-black px-6 py-2 text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-zinc-200 transition-all">Get Started</button>
-            </div>
-        </div>
-    );
-};
+import Navbar from '@/components/site/Navbar';
+import CTA from '@/components/site-new/CTA';
+import Footer from '@/components/site/Footer';
 
 const getCategoryIcon = (category: string) => {
     const lower = category.toLowerCase();
@@ -112,7 +80,7 @@ const Sidebar = ({
             <AnimatePresence>
                 {isOpen && <div onClick={onClose} className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] lg:hidden" />}
             </AnimatePresence>
-            <aside className={`fixed top-[64px] left-0 bottom-0 w-[280px] bg-black border-r border-zinc-900 overflow-y-auto transition-transform z-40 ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 custom-scrollbar`}>
+            <aside className={`fixed top-20 left-0 bottom-0 w-[280px] bg-black border-r border-zinc-900 overflow-y-auto transition-transform z-40 ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 custom-scrollbar`}>
                 <div className="flex flex-col py-8 text-zinc-500">
                     {data.map((category, idx) => {
                         const isExpanded = expandedCategories.includes(category.category);
@@ -178,16 +146,24 @@ export default function DocPageClient() {
 
     return (
         <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
-            <TopBar onOpenSearch={() => setIsSearchOpen(true)} onToggleMobileMenu={() => setIsSidebarOpen(true)} />
-            
-            <Sidebar 
-                isOpen={isSidebarOpen} 
-                activeDocLink={docData.doc.link} 
+            <Navbar />
+
+            {/* Mobile menu button */}
+            <button
+                onClick={() => setIsSidebarOpen(true)}
+                className="lg:hidden fixed top-20 left-4 z-40 bg-zinc-900 border border-zinc-800 rounded-lg p-2 text-zinc-400 hover:text-white transition-all"
+            >
+                <Menu size={20} />
+            </button>
+
+            <Sidebar
+                isOpen={isSidebarOpen}
+                activeDocLink={docData.doc.link}
                 onSelectDoc={handleSelectDoc}
                 onClose={() => setIsSidebarOpen(false)}
             />
 
-            <main className="lg:ml-[280px] pt-[64px]">
+            <main className="lg:ml-[280px] pt-24">
                 <div className="max-w-4xl mx-auto px-8 py-20">
                     <div className="mb-20 border-l border-zinc-800 pl-8 py-2">
                         <div className="text-zinc-600 text-[10px] font-black uppercase tracking-[0.4em] mb-4">{docData.category}</div>
@@ -200,6 +176,11 @@ export default function DocPageClient() {
                     </div>
                 </div>
             </main>
+
+            <div className="lg:ml-[280px]">
+                <CTA />
+                <Footer />
+            </div>
 
             <style jsx global>{`
                 .custom-scrollbar::-webkit-scrollbar { display: none; }

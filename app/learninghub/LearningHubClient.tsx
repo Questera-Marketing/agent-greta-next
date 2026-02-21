@@ -24,50 +24,9 @@ import {
 } from 'lucide-react';
 import { data, DocQuestion, getDocByLink } from '@/components/learninghub/data';
 import { docComponents } from '@/components/learninghub/Docs';
-
-// Minimal TopBar
-const TopBar = ({ onOpenSearch, onToggleMobileMenu }: { onOpenSearch: () => void, onToggleMobileMenu: () => void }) => {
-    const router = useRouter();
-
-    return (
-        <div className="h-[64px] border-b border-zinc-900 flex items-center justify-between px-6 bg-black fixed top-0 left-0 right-0 z-50">
-            <div className="flex items-center gap-4">
-                <button onClick={onToggleMobileMenu} className="lg:hidden text-zinc-400">
-                    <Menu size={20} />
-                </button>
-                <div className="cursor-pointer" onClick={() => router.push("/")}>
-                    <motion.div whileHover={{ opacity: 0.8 }}>
-                        <Image 
-                            alt="Greta Logo" 
-                            width={90} 
-                            height={25} 
-                            src="/Gretanewlogo.svg" 
-                            className="invert dark:invert-0 brightness-[1.5]" 
-                        />
-                    </motion.div>
-                </div>
-            </div>
-
-            <div className="flex-1 max-w-xl mx-12 hidden md:flex items-center gap-3 relative group">
-                <div 
-                    onClick={onOpenSearch}
-                    className="w-full bg-zinc-900/50 border border-zinc-900 rounded-lg py-2 pl-4 pr-12 text-[12px] text-zinc-400 font-bold uppercase tracking-widest cursor-pointer hover:bg-zinc-800 transition-all flex items-center gap-3"
-                >
-                    <Search size={14} className="text-zinc-600" />
-                    <span>Search Documentation...</span>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                        <kbd className="text-[10px] text-zinc-600 font-mono tracking-normal capitalize">⌘K</kbd>
-                    </div>
-                </div>
-            </div>
-
-            <div className="flex items-center gap-6">
-                <span className="hidden sm:block text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 hover:text-white cursor-pointer transition-all" onClick={() => window.open("https://discord.com/invite/vGjWMnBmtN", "_blank")}>Community</span>
-                <button onClick={() => window.open("https://greta.questera.ai/registration", "_blank")} className="bg-white text-black px-6 py-2 text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-zinc-200 transition-all">Get Started</button>
-            </div>
-        </div>
-    );
-};
+import Navbar from '@/components/site/Navbar';
+import CTA from '@/components/site-new/CTA';
+import Footer from '@/components/site/Footer';
 
 const getCategoryIcon = (category: string) => {
     const lower = category.toLowerCase();
@@ -127,7 +86,7 @@ const Sidebar = ({
                     />
                 )}
             </AnimatePresence>
-            <aside className={`fixed top-[64px] left-0 bottom-0 w-[300px] bg-black border-r border-zinc-900 overflow-y-auto transition-transform duration-300 z-[60] ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 custom-scrollbar`}>
+            <aside className={`fixed top-20 left-0 bottom-0 w-[300px] bg-black border-r border-zinc-900 overflow-y-auto transition-transform duration-300 z-[60] ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 custom-scrollbar`}>
                 <div className="flex flex-col py-8">
                     {data.map((category, idx) => {
                         const isExpanded = expandedCategories.includes(category.category);
@@ -240,17 +199,25 @@ export default function LearningHubClient() {
 
     return (
         <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
-            <TopBar onOpenSearch={() => setIsSearchOpen(true)} onToggleMobileMenu={() => setIsSidebarOpen(true)} />
+            <Navbar />
             <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} onSelectDoc={handleSelectDoc} />
 
-            <Sidebar 
-                isOpen={isSidebarOpen} 
-                activeDocLink={activeDoc?.link || ''} 
+            {/* Mobile menu button */}
+            <button
+                onClick={() => setIsSidebarOpen(true)}
+                className="lg:hidden fixed top-20 left-4 z-40 bg-zinc-900 border border-zinc-800 rounded-lg p-2 text-zinc-400 hover:text-white transition-all"
+            >
+                <Menu size={20} />
+            </button>
+
+            <Sidebar
+                isOpen={isSidebarOpen}
+                activeDocLink={activeDoc?.link || ''}
                 onSelectDoc={handleSelectDoc}
                 onClose={() => setIsSidebarOpen(false)}
             />
 
-            <main className="lg:ml-[300px] pt-[64px]">
+            <main className="lg:ml-[300px] pt-24">
                 <div className="max-w-4xl mx-auto px-6 py-20 lg:px-12">
                     <div className="mb-24 border-l border-zinc-900 pl-8 lg:pl-12 py-2">
                         <div className="text-zinc-600 text-[10px] font-black uppercase tracking-[0.4em] mb-4">Protocol Configuration</div>
@@ -261,18 +228,23 @@ export default function LearningHubClient() {
                     <article className="doc-content">
                         {ActiveDocComponent ? <ActiveDocComponent /> : <div className="text-zinc-800 font-mono text-xs uppercase tracking-[0.5em] py-20">Initialize stream...</div>}
                     </article>
-                    
-                    <div className="mt-48 pt-12 border-t border-zinc-900 flex justify-between items-center text-zinc-600 text-[10px] font-bold uppercase tracking-widest">
+
+                    <div className="mt-20 pt-12 border-t border-zinc-900 flex justify-between items-center text-zinc-600 text-[10px] font-bold uppercase tracking-widest">
                         <span>End of Protocol Log</span>
                         <div onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="cursor-pointer hover:text-white transition-colors">↑ Back to Top</div>
                     </div>
                 </div>
             </main>
 
+            <div className="lg:ml-[300px]">
+                <CTA />
+                <Footer />
+            </div>
+
             <style jsx global>{`
                 .custom-scrollbar::-webkit-scrollbar { display: none; }
                 .doc-content h1 { font-size: 3rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 2rem; color: white; }
-                .doc-content h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 5rem; margin-bottom: 1.5rem; color: white; border-top: 1px solid #111; padding-top: 2rem; }
+                .doc-content h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 2rem; margin-bottom: 1.5rem; color: white; border-top: 1px solid #111; padding-top: 2rem; }
                 .doc-content p { color: #888; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1rem; }
                 .doc-content li { color: #888; position: relative; padding-left: 1.5rem; margin-bottom: 1rem; font-size: 1rem; }
                 .doc-content li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 4px; height: 1px; background: #666; }

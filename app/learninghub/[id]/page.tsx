@@ -17,7 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const { doc, category } = docData;
-  const url = `https://greta.questera.ai/learninghub/${id}`;
+  const baseUrl = 'https://www.greta.sh';
+  const url = `${baseUrl}/learninghub/${id}`;
   const title = `${doc.question} | Greta Learning Hub`;
   const description = doc.description;
 
@@ -31,10 +32,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url,
-      siteName: 'Greta',
+      siteName: 'Greta.sh',
       images: [
         {
-          url: doc.banner.startsWith('http') ? doc.banner : `https://greta.questera.ai${doc.banner}`,
+          url: doc.banner.startsWith('http') ? doc.banner : `${baseUrl}${doc.banner}`,
           width: 1200,
           height: 630,
           alt: doc.question,
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: [doc.banner.startsWith('http') ? doc.banner : `https://greta.questera.ai${doc.banner}`],
+      images: [doc.banner.startsWith('http') ? doc.banner : `${baseUrl}${doc.banner}`],
     },
   };
 }
