@@ -2,18 +2,24 @@ import { Metadata } from 'next';
 import LearningHubClient from './LearningHubClient';
 
 export const metadata: Metadata = {
-  title: 'Learning Hub | Greta AI Website Builder Documentation',
-  description: 'Master the art of AI website building. Explore our comprehensive guides on Greta Agent Mode, deployment, GitHub integration, and growth engineering.',
+  title: 'Learning Hub - Greta AI Website Builder Guides',
+  description: 'Master AI website building with Greta. Explore guides on Agent Mode, deployment, GitHub integration, and growth engineering.',
   alternates: {
-    canonical: 'https://greta.questera.ai/learninghub',
+    canonical: 'https://www.greta.sh/learninghub',
   },
   openGraph: {
-    title: 'Greta Learning Hub - AI Website Building Guides',
+    title: 'Learning Hub - Greta AI Website Building Guides',
     description: 'Everything you need to build, deploy, and scale websites with Greta AI.',
-    url: 'https://greta.questera.ai/learninghub',
-    siteName: 'Greta',
-    images: [{ url: 'https://greta.questera.ai/Gretanewlogo.svg' }],
+    url: 'https://www.greta.sh/learninghub',
+    siteName: 'Greta.sh',
+    images: [{ url: '/Gretanewlogo.svg' }],
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Learning Hub - Greta AI Website Building Guides',
+    description: 'Master AI website building with Greta. Guides on Agent Mode, deployment & more.',
+    images: ['/Gretanewlogo.svg'],
   },
 };
 
